@@ -1,7 +1,7 @@
-import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./components/Header";
-import Search from "./components/Search";
+import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import Search from './components/Search';
 
 const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH_KEY;
 
@@ -21,12 +21,13 @@ const App = () => {
       .catch((err) => {
         console.log(err);
       });
+    setWord('');
   };
 
   console.log(UNSPLASH_KEY);
   return (
     <div>
-      <Header title="Images Gallery" />
+      <Header title='Images Gallery' />
       <Search word={word} setWord={setWord} handleSubmit={handleSearchSubmit} />
     </div>
   );
