@@ -11,7 +11,7 @@ UNSPLASH_URL = "https://api.unsplash.com/photos/random"
 UNSPLASH_KEY = os.environ.get("UNSPLASH_KEY", "")
 
 
-DEBUG = True if os.environ.get("DEBUG", "FALSE") == "TRUE" else False
+DEBUG = os.environ.get("DEBUG", "FALSE") == "TRUE"
 
 if not UNSPLASH_KEY:
     raise EnvironmentError("Please create .env.local file andinsert there UNSPLASH_KEY")
