@@ -9,11 +9,9 @@ const Welcome = () => (
       <Card.Text>
         This is a simple application that retrieves photos using Unspash API. In
         order to start enter any searchterm in the input field.
-        <p className='mt-2'>
-          <Button variant='primary' href='https://unsplash.com' target='_blank'>
-            Learn more
-          </Button>
-        </p>
+        <Button variant='primary' href='https://unsplash.com' target='_blank'>
+          Learn more
+        </Button>
       </Card.Text>
     </Card.Body>
   </Card>
