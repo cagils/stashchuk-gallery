@@ -23,7 +23,7 @@ CORS(app)
 app.config["DEBUG"] = DEBUG
 
 
-@app.route("/new-image")
+@app.get("/new-image")
 def new_image():
     word = request.args.get("query")
 
