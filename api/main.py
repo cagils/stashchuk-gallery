@@ -48,7 +48,7 @@ def images():
         image["_id"] = image.get("id")
         result = images_collection.insert_one(image)
         result_id = result.inserted_id
-        return {"result": result_id}
+        return {"inserted_id": result_id}
 
 
 if __name__ == "__main__":
