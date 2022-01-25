@@ -3,8 +3,23 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - '3000:3000'
+      - 3000:3000
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    init: true       # docker run --init
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    container_name: frontend
+  
   api:
     build: ./api
     ports:
       - '5050:5050'
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    init: true       # docker run --init
+    volumes:
+      - ./api:/app
+    container_name: api
+
