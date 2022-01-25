@@ -4,5 +4,6 @@ flask-cors==3.0.10
 pep8==1.7.1
 pip-chill==1.0.1
 pylint==2.12.2
+pymongo==4.0.1
 python-dotenv==0.19.2
 requests==2.27.1
