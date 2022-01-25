@@ -22,6 +22,7 @@ const App = () => {
       setImages([{ ...res.data, title: word }, ...images]);
     } catch (error) {
       console.log(error);
+      console.log(error);
     }
 
     setWord('');
