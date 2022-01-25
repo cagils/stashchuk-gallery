@@ -1,27 +1,50 @@
 version: '3'
+
 services:
+
   frontend:
-    restart: always
     build: ./frontend
     ports:
       - 3000:3000
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     init: true       # docker run --init
+    restart: always
     volumes:
       - ./frontend:/app
       - /app/node_modules
-    container_name: frontend
   
   api:
-    restart: always
     build: ./api
     ports:
       - '5050:5050'
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     init: true       # docker run --init
+    restart: always
     volumes:
       - ./api:/app
-    container_name: api
 
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: dbpass
+    volumes:
+      - mongodb_data:/data/db
+
+  mongo-express:
+    image: mongo-express
+    ports:
+      - 8081:8081
+    restart: always
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongo
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: dbpass
+    depends_on:
+      - mongo
+
+volumes:
+  mongodb_data: 
