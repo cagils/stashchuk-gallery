@@ -1,0 +1,35 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "editor.bracketPairColorization.enabled": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "material-product-icons",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "explorer.compactFolders": false,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "eslint.alwaysShowStatus": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.tabSize": 2,
+    "gitlens.hovers.enabled": false,
+    "editor.formatOnSave": true,
+    "autoimport.showNotifications": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.linting.pycodestyleEnabled": true,
+    "python.formatting.provider": "black",
+    "python.linting.pycodestyleArgs": [
+        "--max-line-length=88"
+    ],
+    "git.postCommitCommand": "sync",
+    "diffEditor.codeLens": true,
+}
